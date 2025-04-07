@@ -14,7 +14,7 @@ const DashboardScreen = ({navigation,expenses,budget,}:
 
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Hello, Rudra 👋</Text>
+      <Text style={styles.welcome}>Hello, Rudra </Text>
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Total Spent</Text>
         <Text style={styles.amount}>${totalSpent.toFixed(2)}</Text>
@@ -129,12 +129,12 @@ const HistoryScreen = ({
   );
 };
 
-//  Budget Screen with editable budget
 const BudgetScreen = ({
   budget,
   setBudget,
   expenses,
-}: {
+}:
+{
   budget: number;
   setBudget: (value: number) => void;
   expenses: { id: string; name: string; amount: number; date: string; category: string }[];
@@ -199,7 +199,7 @@ const SettingsScreen = () => {
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
     alert(`Dark Mode ${!darkMode ? "Enabled" : "Disabled"}`);
-    // Future: integrate with context/theme switcher
+   
   };
 
   return (
@@ -240,7 +240,7 @@ const ProfileScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.profileHeader}>
-        <Text style={styles.avatar}>👤</Text>
+        <Text style={styles.avatar}></Text>
         <Text style={styles.profileTitle}>Your Profile</Text>
       </View>
 
@@ -310,28 +310,28 @@ const Landing = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 90,
-    flex: 1,
     padding: 20,
     backgroundColor: "#f5f5f5",
+    paddingTop: 90,
+    flex: 1,
   },
   screen: {
-    flex: 1,
     justifyContent: "center",
+    flex: 1,
     alignItems: "center",
   },
   welcome: {
+    marginBottom: 20,
     fontSize: 22,
     fontWeight: "600",
-    marginBottom: 20,
   },
   card: {
     backgroundColor: "#fff",
-    padding: 16,
-    borderRadius: 16,
     shadowColor: "#000",
+    padding: 16,
     shadowOpacity: 0.1,
     shadowRadius: 6,
+    borderRadius: 16,
     elevation: 4,
     marginBottom: 20,
   },
